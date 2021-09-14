@@ -16,3 +16,12 @@ class BlogTests(BaseTest):
         self.blog_page.save_screenshot(self._testMethodName)
 
         self.assertTrue(self.blog_page.topic_label.text == "Shameless")
+
+    def test_navigate_to_technology_posts(self):
+        log_message("Navigates to Technology blog posts and verifies that the topic label is Technology.")
+
+        self.blog_page.navigate_to_page()
+        self.blog_page.technology_link.click()
+        self.blog_page.save_screenshot(self._testMethodName)
+
+        self.assertTrue(self.blog_page.topic_label.text == "Technology")
