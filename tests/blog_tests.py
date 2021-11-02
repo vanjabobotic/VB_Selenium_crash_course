@@ -15,7 +15,4 @@ class BlogTests(BaseTest):
         self.blog_page.shameless_link.click()
         self.blog_page.save_screenshot(self._testMethodName)
 
-
         self.assertTrue(self.blog_page.topic_label.text == "Shameless")
-
-
